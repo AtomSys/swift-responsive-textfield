@@ -12,15 +12,16 @@ import SwiftUI
 
 extension ResponsiveTextField {
     fileprivate struct KeyboardReturnTypeKey: EnvironmentKey {
+        
         static let defaultValue: UIReturnKeyType = .default
     }
 
     fileprivate struct FontKey: EnvironmentKey {
-        static let defaultValue: UIFont = .preferredFont(forTextStyle: .body)
+        static let defaultValue: NSFont = .preferredFont(forTextStyle: .body)
     }
 
     fileprivate struct TextColorKey: EnvironmentKey {
-        static let defaultValue: UIColor = .black
+        static let defaultValue: NSColor = .black
     }
 
     fileprivate struct TextAlignmentKey: EnvironmentKey {
@@ -44,12 +45,12 @@ extension EnvironmentValues {
         set { self[ResponsiveTextField.KeyboardReturnTypeKey.self] = newValue }
     }
 
-    var textFieldFont: UIFont {
+    var textFieldFont: NSFont {
         get { self[ResponsiveTextField.FontKey.self] }
         set { self[ResponsiveTextField.FontKey.self] = newValue }
     }
 
-    var textFieldTextColor: UIColor {
+    var textFieldTextColor: NSColor {
         get { self[ResponsiveTextField.TextColorKey.self] }
         set { self[ResponsiveTextField.TextColorKey.self] = newValue }
     }

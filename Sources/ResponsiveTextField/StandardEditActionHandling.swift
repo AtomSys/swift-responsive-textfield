@@ -2,7 +2,7 @@
 //  StandardEditActionHandling.swift
 //
 
-import UIKit
+import SwiftUI
 
 /// Defines all of the standard editing actions that can be performed.
 ///

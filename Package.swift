@@ -5,12 +5,7 @@ import PackageDescription
 
 let package = Package(
     name: "ResponsiveTextField",
-    platforms: [.iOS(.v13)],
-    products: [
-        .library(
-            name: "ResponsiveTextField",
-            targets: ["ResponsiveTextField"]),
-    ],
+    platforms: [.iOS(.v13), .macOS(.v11)],
     dependencies: [
         .package(name: "SnapshotTesting", url: "https://github.com/pointfreeco/swift-snapshot-testing.git", from: "1.8.1"),
         .package(name: "combine-schedulers", url: "https://github.com/pointfreeco/combine-schedulers.git", from: "0.5.3")
